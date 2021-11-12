@@ -1,41 +1,51 @@
 {
-  "name": "decompress-unzip",
-  "version": "4.0.1",
+  "name": "@xingrz/decompress-unzip",
+  "version": "5.1.0-alpha.0",
   "description": "decompress zip plugin",
-  "license": "MIT",
-  "repository": "kevva/decompress-unzip",
-  "author": {
-    "name": "Kevin Mårtensson",
-    "email": "kevinmartensson@gmail.com",
-    "url": "https://github.com/kevva"
-  },
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "engines": {
-    "node": ">=4"
+    "node": ">=10"
   },
   "scripts": {
-    "test": "xo && ava"
+    "build": "tsc -p .",
+    "test": "jest",
+    "prepublishOnly": "rm -rf lib && npm run build"
   },
-  "files": [
-    "index.js"
-  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xingrz/decompress-unzip.git"
+  },
   "keywords": [
     "decompress",
     "decompressplugin",
     "extract",
     "zip"
   ],
+  "author": {
+    "name": "Kevin Mårtensson",
+    "email": "kevinmartensson@gmail.com",
+    "url": "https://github.com/kevva"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xingrz/decompress-unzip/issues"
+  },
+  "homepage": "https://github.com/xingrz/decompress-unzip#readme",
   "dependencies": {
-    "file-type": "^3.8.0",
-    "get-stream": "^3.0.0",
-    "pify": "^2.3.0",
-    "yauzl": "^2.4.2"
+    "@xingrz/decompress-types": "^5.1.0-alpha.0",
+    "file-type": "^16.5.3",
+    "is-stream": "^2.0.1",
+    "pond": "^2.1.2",
+    "yauzl": "^2.10.0"
   },
   "devDependencies": {
-    "ava": "*",
-    "is-jpg": "^1.0.0",
-    "xo": "*"
-  },
-  "xo": {
-    "esnext": true
+    "@types/is-stream": "^2.0.0",
+    "@types/jest": "^27.0.2",
+    "@types/node": "^16.11.7",
+    "@types/yauzl": "^2.9.2",
+    "jest": "^27.3.1",
+    "ts-jest": "^27.0.7",
+    "typescript": "^4.4.4"
   }
 }

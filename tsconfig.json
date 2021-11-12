@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2018",
+    "rootDir": "src",
+    "outDir": "lib",
+    "moduleResolution": "node",
+    "strict": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "declaration": true,
+    "types": [
+      "node",
+      "jest",
+    ],
+  },
+  "include": [
+    "src/**/*",
+  ],
+}

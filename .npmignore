@@ -1,0 +1,14 @@
+.DS_Store
+node_modules
+
+/src
+
+.vscode
+.github
+.editorconfig
+.gitattributes
+
+jest.config.js
+/test
+
+tsconfig.json
