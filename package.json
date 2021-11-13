@@ -40,7 +40,6 @@
     "yauzl": "^2.10.0"
   },
   "devDependencies": {
-    "@types/is-stream": "^2.0.0",
     "@types/jest": "^27.0.2",
     "@types/node": "^16.11.7",
     "@types/yauzl": "^2.9.2",

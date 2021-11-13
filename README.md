@@ -7,8 +7,8 @@
 
 ## Install
 
-```
-$ npm install --save @xingrz/decompress-unzip
+```sh
+npm install --save @xingrz/decompress-unzip
 ```
 
 ## Usage
