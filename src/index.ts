@@ -53,12 +53,12 @@ async function extractEntry(entry: yauzl.Entry, zip: ZipFile, opts: DecompressPl
 
 		if (file.type == 'symlink') {
 			file.linkname = (await pond(stream).spoon()).toString();
+		}
+
+		if (opts?.fileWriter) {
+			await opts.fileWriter(file, file.type == 'file' ? stream : undefined);
 		} else if (file.type == 'file') {
-			if (opts?.fileWriter) {
-				await opts.fileWriter(file, stream);
-			} else {
-				file.data = await pond(stream).spoon();
-			}
+			file.data = await pond(stream).spoon();
 		}
 
 		return file;

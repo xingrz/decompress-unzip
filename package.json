@@ -33,7 +33,7 @@
   },
   "homepage": "https://github.com/xingrz/decompress-unzip#readme",
   "dependencies": {
-    "@xingrz/decompress-types": "^5.1.0-alpha.0",
+    "@xingrz/decompress-types": "^5.2.0-alpha.0",
     "file-type": "^16.5.3",
     "is-stream": "^2.0.1",
     "pond": "^2.1.2",
